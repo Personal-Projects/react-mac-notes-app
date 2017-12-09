@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div id="app">
-        <Toobar />
+        <Toolbar />
         <NoteContainer />
       </div>
     );
