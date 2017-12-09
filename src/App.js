@@ -43,6 +43,7 @@ class App extends Component {
           notes={this.state.notes} 
           selectedNoteId={this.state.selectedNoteId}
           onClickNote={this.handleClickNote}
+          onNoteEditorChange={this.handleNoteEditorChange}
         />
       </div>      
     );

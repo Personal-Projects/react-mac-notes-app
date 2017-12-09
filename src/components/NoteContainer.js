@@ -15,7 +15,10 @@ class NoteContainer extends Component {
           selectedNoteId={this.props.selectedNoteId}
           onClickNote={this.props.onClickNote}
         />
-        <NoteEditor />
+        <NoteEditor 
+          selectedNote={selectedNote}
+          onNoteEditorChange={this.props.onNoteEditorChange}
+        />
       </div>
     );
   }
