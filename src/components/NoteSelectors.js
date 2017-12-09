@@ -8,14 +8,14 @@ class NoteSelectors extends Component {
     const noteSelectors = transformedNotes.map(note =>
       <NoteSelector
         key={note.id}
+        id={note.id}
         body={note.body}
         timestamp={note.timestamp}
-        id={note.id}
         selectedNoteId={this.props.selectedNoteId}
         onClickNote={this.props.onClickNote}
       />
     );
-
+    
     return (
       <div className="note-selectors">
         {noteSelectors}

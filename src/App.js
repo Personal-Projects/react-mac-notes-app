@@ -17,11 +17,11 @@ class App extends Component {
       searchText: ""
     }
   }
-  
+
   handleClickNote = (id) => {
     this.setState({selectedNoteId: id});
   }
-  
+
   handleNoteEditorChange = (text) => {
     const newNotes = this.state.notes.map((note) => {
       if (note.id === this.state.selectedNoteId) {
@@ -81,18 +81,19 @@ class App extends Component {
   render() {
     return (
       <div id="app">
-        <Toolbar 
+        <Toolbar
           onNewNote={this.handleNewNote}
           onDeleteNote={this.handleDeleteNote}
           onSearchNote={this.handleSearchNote}
         />
-        <NoteContainer 
-          notes={this.state.notes} 
+        <NoteContainer
+          notes={this.state.notes}
           selectedNoteId={this.state.selectedNoteId}
+          searchText={this.state.searchText}
           onClickNote={this.handleClickNote}
           onNoteEditorChange={this.handleNoteEditorChange}
         />
-      </div>      
+      </div>
     );
   }
 }
