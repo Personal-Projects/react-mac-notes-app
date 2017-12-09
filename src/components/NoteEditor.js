@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {formatTitle,formatTimestamp} from '../helpers';
+import {formatTimestamp} from '../helpers';
 
 function formatTimestamp(timestamp) {
   return new Date(timestamp).toUTCString();
