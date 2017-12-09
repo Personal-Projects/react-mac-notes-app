@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {formatTitle, formatTimestamp} from '../helpers';
 
 function formatTitle(body) {
   var maxLength = 20;

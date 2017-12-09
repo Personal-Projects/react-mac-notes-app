@@ -19,6 +19,21 @@ class App extends Component {
   handleClickNote = (id) => {
     this.setState({selectedNoteId: id});
   }
+  
+  handleNoteEditorChange = (text) => {
+    const newNotes = this.state.notes.map((note) => {
+      if (note.id === this.state.selectedNoteId) {
+        return {
+          id: note.id,
+          body: text,
+          timestamp: Date.now()
+        };
+      } else {
+        return note;
+      }
+    });
+    this.setState({notes: newNotes});
+  }
 
   render() {
     return (
